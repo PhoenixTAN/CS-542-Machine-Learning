@@ -15,7 +15,7 @@ https://my.oschina.net/findbill/blog/535044
 
 
 
-## Data preprocessing
+## Data Preprocessing
 
 ![alt text](./PCA-images/data-preprocessing.png)
 
