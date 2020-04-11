@@ -194,3 +194,9 @@ where $M$ is the new dimensionality of the original feature/input $x$.
 
 ![alt text](./Classification-Images/nonlinear-03.png)
 
+
+
+#### True or false question
+Maximum likelihood can be used to derive a **closed-form solution** to logistic regression.
+**Answer: False, it can be used to derive cost, but no closed form solution exists.**
+

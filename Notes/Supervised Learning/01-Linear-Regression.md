@@ -23,6 +23,12 @@ where $m$ is the number of samples and we use superscript $i$ here to notate the
 
 Cost function describes the distance between your prediction and the ground truth.
 
+### True of False Question
+Question: Suppose we use polynomial features for linear regression, then the hypothesis is linear in the original features.
+#### Answer: False, it is linear in the new polynomial features.
+![alt text](./Linear-Regression-Images/feature-space.jpg)
+
+
 ## Multivariate Linear Regression
 ### hypothesis
 $$h_{\theta}(x) = \theta_{0} + \theta_{1}x_1 + \theta_2 x_2 + \cdot \cdot \cdot + \theta_n x_n$$
@@ -153,9 +159,11 @@ $$
 $$p( (x^{(i)}, y^{(i)}) | \theta )$$
 maximize probability of data given model.
 
-![alt text](./Linear-Regression-Images/maximumLikelihood01.png)
+![alt text](./Linear-Regression-Images/MaximumLikelihood01.png)
 
-![alt text](./Linear-Regression-Images/maximumLikelihood02.png)
+![alt text](./Linear-Regression-Images/MaximumLikelihood02.png)
+
+该方法的核心是条件概率，条件概率是给定参数$\theta$时，最大化已知观测结果的概率，在这个例子里面，$X$就是五次观察结果(Observations)，$\theta$是抛出硬币正面朝上的概率，我们在条件概率里面，认为这个参数是给定的，我们如何对这个参数取值，才能使得这个条件概率最大化。
 
 ![alt text](./Linear-Regression-Images/maximumLikelihood03.png)
 

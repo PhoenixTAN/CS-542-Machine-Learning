@@ -10,9 +10,12 @@ https://my.oschina.net/findbill/blog/535044
 
 # Principal Component Analysis (PCA)
 
-## Motivation
+## Motivation -- Dimensionality Reduction
 
-
+1. Data normalization to have zero mean and unit standard deviation.
+2. Compute the covariance matrix of the data.
+3. SVD. Decompose the matrix wich Singular Value Decomposition to obtains its eigenvectors/values. 
+4. Project each point onto the top k eigenvectors to obtain the lower dimensional points.
 
 
 ## Data Preprocessing
@@ -22,6 +25,10 @@ https://my.oschina.net/findbill/blog/535044
 ## PCA Algorithm
 
 ![alt text](./PCA-images/svd.png)
+
+## PCA components
+
+![alt text](./PCA-images/PCA-component.png)
 
 ## Projection/Reconstruction Error
 ![alt text](./PCA-images/projection-error.png)
