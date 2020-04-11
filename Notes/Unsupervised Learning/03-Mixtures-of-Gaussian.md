@@ -1,5 +1,7 @@
 # Mixtures of Gaussians
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 ## Single Gaussian
 We want to know which curve was most likely responsible for creating the data points that we observed? 
 
@@ -130,11 +132,12 @@ The dimension of each Gaussian is $N$. We have $K$ Gaussian distrubutions in all
 
 
 We can estimate parameters using Maximum Likelihood, i.e. maximize 
+
 $$
 \ln(p(\bm{X|\pi, \mu, \Sigma}))
-=
-\ln p(x^1, x^2, ..., x^N | \pi_1, ... , \pi_K, \mu_1, ...)
+= \ln p(x^1, x^2, ..., x^N | \pi_1, ... , \pi_K, \mu_1, ...)
 $$
+
 This algorithm is called **Expectation Maximization (EM)**.
 
 ### Expectation Maximization
