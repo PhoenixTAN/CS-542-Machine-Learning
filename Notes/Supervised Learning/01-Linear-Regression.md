@@ -75,10 +75,18 @@ Calculation.
 
 $$
 \frac{\partial }{\partial \theta_j}J(\theta)
-= \frac{1}{2m}\sum_{i=1}^{m}\frac{\partial }{\partial \theta_j}(h_{\theta}(x^{(i)}) - y^{(i)})^{2} \\
-= \frac{1}{2m}\sum_{i=1}^{m} \cdot 2 \cdot (h_{\theta}(x^{(i)}) - y^{(i)}) \cdot \frac{\partial }{\partial \theta_j}(h_{\theta}(x^{(i)}) - y^{(i)}) \\
-= 
-\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})\frac{\partial }{\partial \theta_j}(\theta_{0} + \theta_{1}x_1^{(i)} + \theta_2 x_2^{(i)} + \cdot \cdot \cdot + \theta_n x_n^{(i)} - y^{(i)})\\
+= \frac{1}{2m}\sum_{i=1}^{m}\frac{\partial }{\partial \theta_j}(h_{\theta}(x^{(i)}) - y^{(i)})^{2}
+$$
+
+$$
+= \frac{1}{2m}\sum_{i=1}^{m} \cdot 2 \cdot (h_{\theta}(x^{(i)}) - y^{(i)}) \cdot \frac{\partial }{\partial \theta_j}(h_{\theta}(x^{(i)}) - y^{(i)}) 
+$$
+
+$$
+= \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})\frac{\partial }{\partial \theta_j}(\theta_{0} + \theta_{1}x_1^{(i)} + \theta_2 x_2^{(i)} + \cdot \cdot \cdot + \theta_n x_n^{(i)} - y^{(i)})
+$$
+
+$$
 = \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})x_j
 $$
 
