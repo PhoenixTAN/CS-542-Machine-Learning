@@ -4,6 +4,8 @@
 ###### Date: Feb 22, 2020
 --- 
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 ## Definition
 In statistics, linear regression is a linear approach to modeling the **relationship** between **a scalar response** (or dependent variable) and **one or more explanatory variables** (or independent variables).
 
@@ -150,7 +152,7 @@ $$
 \theta = (X^TX)^{-1}X^T y
 $$
 
-![alt text](./Linear-Regression-Images/tradeoff.png)
+![alt text](./Linear-Regression-Images/Tradeoff.png)
 
 
 ## Maximum Likelihood: Another view of cost function
