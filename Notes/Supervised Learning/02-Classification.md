@@ -3,6 +3,9 @@
 ###### Author: Ziqi Tan
 ###### Date: Feb 23, 2020
 --- 
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 ## Binary Classification
 First of all, let's consider a binary classification problem.
 
@@ -34,11 +37,16 @@ $$\frac{\partial \sigma(z)}{\partial z}
 =\frac{\partial }{\partial z}  (\frac{1}{1+e^{-z}})
 =(-1)(1+e^{-z})^{-2}(-e^{-z})
 =\frac{e^{-z}}{(1+e^{-z})^{2}}
-\\
+$$
+$$
 = \sigma(z)(1-\sigma(z))
-\\
+$$
+
+$$
 = \frac{1}{1+e^{-z}}(1-\frac{1}{1+e^{-z}})
-\\
+$$
+
+$$
 = \frac{(1+e^{-z})-1}{(1+e^{-z})^{2}}
 $$
 Therefore, this is an interesting result.
@@ -119,7 +127,9 @@ It obviously fulfills our expection of the cost function.
 ### Derivative with respect to $\theta$
 **Cost function and hypothesis.**
 $$J(\theta) = 
-\frac{1}{m}\sum_{i=1}^{m}Cost(h_{\theta}(x^{(i)}), y^{(i)}) \\ 
+\frac{1}{m}\sum_{i=1}^{m}Cost(h_{\theta}(x^{(i)}), y^{(i)}) 
+$$
+$$
 = \frac{1}{m}\sum_{i=1}^{m}\{-y\log h_{\theta}(x^{(i)}) - (1-y^{(i)})\log (1-h_{\theta}(x^{(i)}))\}
 $$
 where m is the number of samples.
@@ -136,8 +146,12 @@ $$
 $$
 \frac{\partial J(\theta)}{\partial h_\theta(x)}
 = \frac{1}{m}\sum_{i=1}^{m} \{
--y^{(i)}\frac{1}{h_\theta(x^{(i)})}-(1-y^{(i)})\frac{-1} {1-h_\theta(x^{(i)})} \}\\
-= \frac{1}{m}\sum_{i=1}^{m} \{ \frac{-y^{(i)}}{h_\theta(x^{(i)})}+\frac{1-y^{(i)}}{1-h_\theta(x^{(i)})} \}\\
+-y^{(i)}\frac{1}{h_\theta(x^{(i)})}-(1-y^{(i)})\frac{-1} {1-h_\theta(x^{(i)})} \}
+$$
+$$
+= \frac{1}{m}\sum_{i=1}^{m} \{ \frac{-y^{(i)}}{h_\theta(x^{(i)})}+\frac{1-y^{(i)}}{1-h_\theta(x^{(i)})} \}
+$$
+$$
 = \frac{1}{m}\sum_{i=1}^{m} \{ \frac{h_\theta(x^{(i)})-y^{(i)}}{h_\theta(x^{(i)})(1-h_\theta(x^{(i)}))} \}
 $$
 
@@ -153,8 +167,12 @@ $$
 Therefore, 
 
 $$\frac{\partial J(\theta)}{\partial \theta} 
-= \frac{\partial J(\theta)}{\partial h_\theta(x)}\frac{\partial h_\theta(x)}{\partial \theta} \\
-= \frac{1}{m}\sum_{i=1}^{m} \{ \frac{h_\theta(x^{(i)})-y^{(i)}}{h_\theta(x^{(i)})(1-h_\theta(x^{(i)}))} x^{(i)} \cdot \sigma(x^{(i)})\cdot (1-\sigma(x^{(i)})) \} \\
+= \frac{\partial J(\theta)}{\partial h_\theta(x)}\frac{\partial h_\theta(x)}{\partial \theta} 
+$$
+$$
+= \frac{1}{m}\sum_{i=1}^{m} \{ \frac{h_\theta(x^{(i)})-y^{(i)}}{h_\theta(x^{(i)})(1-h_\theta(x^{(i)}))} x^{(i)} \cdot \sigma(x^{(i)})\cdot (1-\sigma(x^{(i)})) \} 
+$$
+$$
 = \frac{1}{m}\sum_{i=1}^{m} \{  (h_\theta(x^{(i)})-y^{(i)}) x^{(i)} \}
 $$
 
@@ -200,3 +218,8 @@ where $M$ is the new dimensionality of the original feature/input $x$.
 Maximum likelihood can be used to derive a **closed-form solution** to logistic regression.
 **Answer: False, it can be used to derive cost, but no closed form solution exists.**
 
+$$
+L(\theta) = \prod_{i=1}^{m} h(\theta, x_i)^{y_i}(1-h(\theta,  x_i))^{1-y_i}
+$$
+
+解析解(closed-form solution)，又称为闭式解，是可以用解析表达式来表达的解。在数学上，如果一个方程或者方程组存在的某些解，是由有限次常见运算的组合给出的形式，则称该方程存在解析解。二次方程的根就是一个解析解的典型例子。在低年级数学的教学当中，解析解也被称为公式解。

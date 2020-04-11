@@ -139,6 +139,35 @@ This algorithm is called **Expectation Maximization (EM)**.
 
 ### Expectation Maximization
 
+
+
 ![alt text](./Gaussians-images/EM-for-GMM.png)
 
-1. 随机初始化各参数。
+1. Initialize the means $\mu_k$, covariances $\Sigma_k$ and mixing coefficients $\pi_k$ and evaluate the initial value of the log likelihood.
+2. E step. Evaluate the responsibility value using the current parameter values. 
+$$
+p(z_k|x_i) = \frac{\pi_k N(x_i|\mu_k, \Sigma_k)}{\Sigma_{j=1}^{K}N(x_i | \mu_j, \sigma_j)}
+$$
+其中，$i = 1, 2, 3, ..., m$，m为总样本数，K为高斯分布的个数。计算各个数据样本$x_i$属于第k个cluster的概率。
+
+3. M step. Re-estimate the parameters using the current responsibilities. 根据刚刚得出的概率，重新计算means $\mu_k$, covariances $\Sigma_k$ and mixing coefficients $\pi_k$.
+
+重新计算各个高斯分布的权重(mixing coefficients) 
+$$
+\pi_k = \frac{1}{m}\Sigma_{i=1}^{m}p(z_k|x_i)
+$$
+
+均值的计算，例如，第k个高斯分布的均值：
+$$
+\mu_k^{new} = \frac{\Sigma_{i=1}^{m}p(z_k|x_i)x_i}{\Sigma_{i=1}^{m}p(z_k|x_i)}
+$$
+
+协方差矩阵的计算，
+$$
+\Sigma_k^{new} = \frac{\Sigma_{i=1}^{m}p(z_k|x_i)(x_i-\mu_k^{new})(x_i-u_k^{new})^T}{\Sigma_{i=1}^{m}p(z_k|x_i)}
+$$
+
+4. 重复E-step and M-step直到收敛。
+
+那这跟Maximum Likelihood又有什么关系呢？
+我们的每一步，实际上都是在maximize p(x).
