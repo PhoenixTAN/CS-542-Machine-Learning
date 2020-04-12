@@ -169,9 +169,16 @@ $$
 $$
 P(A|R) = P(A) \frac{P(R|A)}{P(R)}
 $$
+
 $$
-P(A) = \frac{7+3}{7+3+1+9} = \frac{1}{2} \\
-P(R) = \frac{7+1}{20} = \frac{2}{5}\\
+P(A) = \frac{7+3}{7+3+1+9} = \frac{1}{2}
+$$
+
+$$
+P(R) = \frac{7+1}{20} = \frac{2}{5}
+$$
+
+$$
 P(R|A) = \frac{P(R \cap A)}{P(A)} = \frac{\frac{7}{20}}{\frac{1}{2}} = \frac{7}{10}
 $$
 调整因子：
@@ -207,13 +214,58 @@ $$
 P(C|\bar A \cap \bar B) = \frac{P(C \cap \bar A \cap \bar B)}{P(\bar A \cap \bar B)} = \frac{0.3}{1-0.3-0.3} = \frac{3}{4}
 $$
 
+### 例子：流感病毒检测
+After your yearly checkup, the doctor has bad news and good news. 
+
+The bad news is that you tested positive for a flu virus, and that the test is 99% accurate (i.e., the probability of testing positive given that you have the virus is 0.99, as is the probability of testing negative given that you don’t have the disease). 
+
+The good news is that this is a rare virus, striking only one in 10,000 people. 
+
+What are the chances that you actually have the disease? Show your calculations as well as giving the ﬁnal result. 
+
+Hint: use Baye’s Rule.
+
+解：
+定义事件D (Disease)为实际上是否患上流感,D=1为患上流感，D=0为没有患上流感。
+$$
+p(D=1) = 0.0001 \ p(D=0) = 0.9999
+$$
+
+定义事件T (Test)为实验检测结果，T=1为实验结果为阳性，T=0为实验结果为阴性。根据题目，检测准确度为99%，那就是说，如果我患病了，那我真的患病的概率是99%，用条件概率的角度去思考，我们就得到了：
+$$
+p(T=1|D=1) = 0.99 \ p(T=1|D=0) = 0.01
+$$
+
+$$
+p(T=1|D=0) = 0.01 \ p(T=0|D=1) = 0.99
+$$
+
+我们要计算的是，在实验检测结果为阳性的时候，真正患上流感的概率是多少？
+$$
+p( D=1 | T=1 ) = \frac{p(T = 1 , D = 1)}{p(T=1)} = \frac{p(T = 1 | D = 1)p(D=1)}{p(T=1)}
+$$
+贝叶斯思想：$p(D=1)$是prior，$p(T=1|D=1)$是maximum likelihood.
+全概率公式计算$p(T=1)$.
+$$
+p(T=1) = p(T=1|D=1)p(D=1) + p(T=1|D=0)p(D=0)
+$$
+
+$$
+= 0.99\times 0.0001 + 0.01 \times 0.9999 = 0.000099+0.009999 = 0.010098
+$$
+
+$$
+p( D=1 | T=1 ) = \frac{0.99\times 0.0001}{0.010098} = 0.0098
+$$
+所以，在检测出来你患病的条件下，你真的患病的概率是0.0098，这个数远远小于0.99，这就得益于$p(D=1)=0.0001$这个prior的调整。
+
 ## Joint Probability
 在概率论中, 对两个随机变量$X$和$Y$，其联合分布是同时对于$X$和$Y$的概率分布。
 
 ### 离散随机变量的联合分布
 联合分布**概率质量函数**为
-$$Pr(X = x \ and \ Y = y) \\
-= P(Y=y | X=x)P(X=x) \\ 
+$$Pr(X = x \ and \ Y = y) 
+= P(Y=y | X=x)P(X=x)  
 = P(X=x|Y=y)P(Y=y)
 $$
 
@@ -241,10 +293,6 @@ $$
 $$
 p_{X,Y}(x,y)=p_{X}(x) \cdot p_{Y}(y)
 $$
-
-
-
-## Marginal Probability
 
 
 
