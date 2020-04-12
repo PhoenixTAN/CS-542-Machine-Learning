@@ -146,9 +146,15 @@ $y$ is a $m \times 1$ matrix.
 
 Calculation.
 $$
-(X\theta - y)^T(X\theta - y) \\
-= ( \theta^T X^T - y^T )(X \theta - y)\\
-= \theta^T X^T X \theta - y^T X \theta - \theta^T X^T y +  y^T y \\
+(X\theta - y)^T(X\theta - y) 
+$$
+
+$$
+= ( \theta^T X^T - y^T )(X \theta - y)$$
+$$
+= \theta^T X^T X \theta - y^T X \theta - \theta^T X^T y +  y^T y 
+$$
+$$
 = \theta^T X^T X \theta - 2y^T X \theta + y^T y
 $$
 Ignore constant multiplier.

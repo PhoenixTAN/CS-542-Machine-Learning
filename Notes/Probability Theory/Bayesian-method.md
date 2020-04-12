@@ -164,3 +164,30 @@ $$
 ![alt text](./images/posterior-distribution-pdf.png)
 
 Likelihood被Prior修正了。
+
+## Bayesian Linear Regression
+直观上讲，我们用贝叶斯来修正Linear Regression，比如说，加上高斯噪声。
+
+#### Reference
+https://towardsdatascience.com/introduction-to-bayesian-linear-regression-e66e60791ea7
+
+从频率主义者的角度，就是比较常规的Gradient descent梯度下降法来进行训练。最终会得到一个solution:
+$$
+y = \theta^TX
+$$
+
+但是贝叶斯方法的y，是y服从一个概率分布，比如：
+$$
+N(\theta^TX, \sigma^2I)
+$$
+把原来频率主义者得到的y当作是均值，再叠加上高斯噪声。
+
+
+The posterior probability of the model parameters is conditional upon the training inputs and outputs:
+$$
+p(\theta|y,X) = \frac{p(y|\theta, X)p(\theta |X)}{p(y|X)}
+$$
+
+$$
+Posterior = \frac{Likelihood \times Prior}{Normalization}
+$$
