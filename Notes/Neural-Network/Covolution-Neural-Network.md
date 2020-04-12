@@ -63,4 +63,6 @@ Pooling layers reduce the dimensions of the data by combining the outputs of neu
 
 ### Dropout: A classical regularization Technique
 
+## Count the parameters
+
 
