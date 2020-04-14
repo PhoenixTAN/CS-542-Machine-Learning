@@ -47,6 +47,8 @@ $$
 Class: Undefine  \ \ \ if  -1 < w^Tx+b < 1
 $$
 
+**我们怎么确定支持向量？**
+
 假设现在如图这两个点$x^+$和$x^-$，是两个支持向量。
 
 易知，
@@ -125,7 +127,131 @@ This is the primal formulation.
 
 Apply Lagrange multipliers: formulate equivalent problem.
 
-使用拉格朗日乘子，转化为等价问题。
+使用拉格朗日乘子，转化为没有约束的等价问题。
 
+### Lagrange multipliers
+Convert the primal constrained minimization to an unconstrained optimization problem: represent constraints as penalty  terms:
 
+$$
+\min_{w, b} \frac{1}{2}||w||^2 + penalty
+$$
+对每个样本$\{(x_i, y_i)\}$的惩罚求和，
+$$
+penalty = \sum_{i=1}^{n}\max_{\alpha_i \geq 0} \alpha_i[1-(w^Tx_i + b)y_i]
+$$
+其中，n是样本数量，$\alpha_i$是拉格朗日乘子。
 
+**max在这里到底是约束还是变量？**
+
+如果约束满足：
+$$
+1-(w^Tx_i + b)y_i \leq 0 
+$$
+
+如果约束不满足：
+$$
+1-(w^Tx_i + b)y_i > 0
+$$
+大的拉格朗日乘子$\alpha_i$，确保惩罚足够大。
+
+**提问，阿尔法怎么设？**
+
+得到，
+$$
+\min_{w, b} \{\frac{1}{2}||w||^2 + \sum_{i=1}^{n}\max_{\alpha_i \geq 0} \alpha_i[1-(w^Tx_i + b)y_i]\}
+$$
+
+代价函数：
+$$
+\max_{\alpha_i \geq 0}\min_{w,b} J(w,b;\alpha) = 
+\max_{\alpha_i \geq 0}\min_{w,b} \{ \frac{1}{2}||w||^2 + \sum_{i=1}^{n} \alpha_i[1-(w^Tx_i + b)y_i] \}
+$$
+
+对w, b求偏导，
+$$
+\frac{\partial J(w,b;\alpha)}{\partial w}
+= w - \sum_{i=1}^{n}\alpha_i x_i y_i = 0
+$$
+
+$$
+\frac{\partial J(w,b;\alpha)}{\partial b}
+= -\sum_{i=1}^{n}\alpha_i y_i = 0
+$$
+
+### Dual problem
+重新代进原式，得到Dual problem，现在我们需要优化$\alpha$，训练的时候，我们
+$$
+L = \max_{\alpha_i \geq 0} \{ \sum_{i=1}^{n}\alpha_i - \frac{1}{2} \sum_{i,j=1}^{n} y_i y_j \alpha_i \alpha_j (x_i^T x_j)\}
+$$
+
+$$
+s.t. \alpha_i \geq 0; \sum_{i=1}^{n}\alpha_i y_i = 0
+$$
+
+Then use the obtained $\alpha_i$'s to solve for the weights and bias:
+
+$$
+w = \sum_{i=1}^{n} \alpha_i y_i
+ x_i 
+$$
+
+$$
+b = y_i - w^T x_i 
+$$
+
+In practice, predict
+$$
+y = sign[w^Tx+b]
+$$
+
+### Primal v.s. Dual Problem
+
+## Soft margin and slack variables
+![alt text](./images/soft-margin.png)
+
+$\xi$的取值，如图所示，如果红点在+1平面的左方，$\xi$为0，如果在决策平面的左方，+1平面的右方，取值则为(0,1)，如果在决策平面另一侧，取值则大于1.
+
+## Kernel trick for non-linear decision boundary
+![alt text](./images/non-linear-decision-boundary.png)
+
+虽然可以用high order polynomial features，我们就希望用一个变换，把这些数据变得linear seperable,然后用linear SVM.
+
+### Input transformation
+![alt text](./images/input-transformation.png)
+
+### Lankmark (Kernel Function)
+
+Given data set
+$$
+(x^{(1)}, y^{(1)}), (x^{(2)}, y^{(2)}), ..., (x^{(m)}, y^{(m)})
+$$
+
+Choose lankmarks
+$$
+l^{(1)} = x^{(1)}, l^{(2)} = x^{(2)}, ..., l^{(m)} = x^{(m)}
+$$
+
+原来的预测函数是这样：
+Predict "1" when: 
+$$
+\theta_0 + \theta_1 x_1 + \theta_2 x_2 + ... + \theta_n x_n \geq 0
+$$
+经过变换以后：
+Predict "1" when: 
+$$
+\theta_0 + \theta_1 f_1 + \theta_2 f_2 + ... + \theta_n f_n \geq 0
+$$
+其中，$f_i$就是Kernel Function.
+
+Kernel Function需要自行选择，比如选的是高斯分布。
+
+$$
+f_i = similarity(x, l^{(i)}) = \exp(-\frac{||x-l^{(i)}||^2}{2\sigma^2})
+$$
+分布的参数需要自己设定，例如，我们这里设置均值为样本数据点本身，方差另外设定。
+
+![alt text](./images/kernels.png)
+
+![alt text](./images/final-decision-function.png)
+
+![alt text](./images/svm-pros-and-cons.png)
