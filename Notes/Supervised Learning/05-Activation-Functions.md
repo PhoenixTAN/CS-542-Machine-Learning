@@ -24,6 +24,8 @@ The activation function of a node defines the output of that node given an input
 ![alt text](./Classification-Images/hidden-layer.jpg)
 当然你可以说我们可以用无限条直线去逼近一条曲线啊！额,当然可以,不过比起用non-linear的activation function来说就太萌了！
 
+![alt text](./Classification-Images/line-boundary.jpg)
+
 ### 每一层叠加完了以后, 加一个激活函数
 ![alt text](./Classification-Images/sigmoid.jpg)
 

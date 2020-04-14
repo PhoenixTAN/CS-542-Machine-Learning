@@ -1,5 +1,5 @@
 # Softmax function in output layer
-
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 ## Reference
 
 https://en.wikipedia.org/wiki/Softmax_function
@@ -30,7 +30,7 @@ $$
 where $j$ is the $j^{th}$ class and $x$ is the input sample.
 
 $$
-P(y=j|x) = \frac{\exp(z_j)-x^*}{x^* + log(exp(x_1 - x^*)) + \cdot \cdot \cdot + log(exp(x_n - x^*))}
+P(y=j|x) = \frac{\exp(z_j)-x^*}{x^* + log(exp(x_1 - x^*)) + ... + log(exp(x_n - x^*))}
 $$
 
 ## Multiclass cross-entropy loss function
@@ -100,7 +100,10 @@ $$
 
 $$
 \frac{\partial P}{\partial z_j} 
-= \frac{exp(z_j)'\sum_{k=1}^{K} \exp(z_k) - [\sum_{k=1}^{K} \exp(z_k)]'exp(z_j)}{[\sum_{k=1}^{K} \exp(z_k)]^2} \\
+= \frac{exp(z_j)'\sum_{k=1}^{K} \exp(z_k) - [\sum_{k=1}^{K} \exp(z_k)]'exp(z_j)}{[\sum_{k=1}^{K} \exp(z_k)]^2} 
+$$
+
+$$
 = \frac{exp(z_j)(\sum_{k=1}^{K} \exp(z_k) - exp(z_j))}{[\sum_{k=1}^{K} \exp(z_k)]^2}
 $$
 Therefore, 

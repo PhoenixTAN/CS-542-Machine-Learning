@@ -86,12 +86,12 @@ Associate **a weight $\pi_k$** with each Gaussian Component: **"The mixing coeff
 ### Higher Dimension
 Multivariate normal distribution:
 $$
-f(x_1, x_2, ... , x_N) = \frac{1}{\sqrt{(2\pi)^N\bm{|\Sigma|}}}\exp(-\frac{1}{2}(\bm{x-\mu})^T \bm{\Sigma}^{-1}(\bm{x-\mu}))
+f(x_1, x_2, ... , x_N) = \frac{1}{\sqrt{(2\pi)^N{|\Sigma|}}}\exp(-\frac{1}{2}({{X}-\mu})^T {\Sigma}^{-1}({{X}-\mu}))
 $$
-where $\bm{\Sigma}$ is the **covariance matrix** of $\bm{X}$.
+where ${\Sigma}$ is the **covariance matrix** of ${X}$, $X$ and $\mu$ are N by 1 matrice.
 
 $$
-\bm{X} = (x_1, x_2, ... , x_N)^T
+X = (x_1, x_2, ... , x_N)^T
 $$
 Then, we will have the covariance matrix:
 $$
