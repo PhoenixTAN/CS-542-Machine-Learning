@@ -12,7 +12,7 @@ First of all, let's consider a binary classification problem.
 $$y \in \{ 0, 1 \}$$
 
 **Why not** use least squares regression?
-$$  \argmin \limits_{\theta}
+$$  \min_{\theta}
     \frac{1}{2m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2
 $$
 
@@ -120,7 +120,7 @@ $$Cost(h_{\theta}(x), y) =
 \right.
 $$
 
-![alt text](./Entropy-Images/Cost-function.png)
+![alt text](./Classification-Images/cost-func.png)
 
 It obviously fulfills our expection of the cost function.
 
