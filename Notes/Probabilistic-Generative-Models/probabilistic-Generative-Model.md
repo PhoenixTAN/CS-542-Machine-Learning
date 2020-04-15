@@ -1,5 +1,7 @@
 # Generative model
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 ## Overview
 In statistical classification, including machine learning, two main approaches are called the generative approach and the discriminative approach.
 
@@ -94,8 +96,8 @@ $$
 注意，这里$x$和$\mu_k$都是p by 1 matrix.
 
 $$
-\log P( Y = k | X = x ) = \log C' + \log \pi_k
-- \frac{1}{2}(x-\mu_k)^T(\Sigma^{-1}x - \Sigma^{-1}\mu_k)
+\log P( Y = k | X = x ) = \log C' + \log \pi_k - 
+\frac{1}{2}(x-\mu_k)^T(\Sigma^{-1}x - \Sigma^{-1}\mu_k)
 $$
 
 $$
