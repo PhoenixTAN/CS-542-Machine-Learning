@@ -42,10 +42,8 @@ Taking logs of the original expression gives us:
 $$
 \ln(P(9, 9.5, 11; \mu, \sigma)) = 
 \ln(\frac{1}{\sigma \sqrt{2\pi}})
--\frac{(9-\mu)^2}{2\sigma^2}
-+ \ln(\frac{1}{\sigma \sqrt{2\pi}})
--\frac{(9.5-\mu)^2}{2\sigma^2}
-+ \ln(\frac{1}{\sigma \sqrt{2\pi}})
+-\frac{(9-\mu)^2}{2\sigma^2} + \ln(\frac{1}{\sigma \sqrt{2\pi}})
+-\frac{(9.5-\mu)^2}{2\sigma^2} + \ln(\frac{1}{\sigma \sqrt{2\pi}})
 -\frac{(11-\mu)^2}{2\sigma^2}
 $$
 
@@ -114,19 +112,17 @@ f(x_1, x_2) = \frac{1}{2\pi \sigma_{x_1}\sigma_{x_2} \sqrt{1-\rho^2}}
 $$
 where 
 $$
-\bm{\Sigma} =
-\left[
- \begin{matrix}
-   \sigma_{x_1}^2 & \rho\sigma_{x_1}\sigma_{x_2}\\
-   \rho\sigma_{x_1}\sigma_{x_2} & \sigma_{x_1}^2  \\
-  \end{matrix} 
-\right]
+\Sigma =
+ \begin{bmatrix}
+   \sigma_{x_1}^2 & \rho\sigma_{x_1}\sigma_{x_2} , \
+   \rho\sigma_{x_1}\sigma_{x_2} & \sigma_{x_1}^2  
+  \end{bmatrix} 
 $$
 
 ### Maximum Likelihood
 Mixture of Gaussians:
 $$
-p(\bm{X}) = \sum_{k=1}^{K}\pi_k \N( \bm{X} | \bm{\mu_k, \Sigma_{k}})
+p(X) = \sum_{k=1}^{K}\pi_k \ N( X | \mu_k, \Sigma_{k})
 $$
 The dimension of each Gaussian is $N$. We have $K$ Gaussian distrubutions in all.
 
@@ -134,8 +130,8 @@ The dimension of each Gaussian is $N$. We have $K$ Gaussian distrubutions in all
 We can estimate parameters using Maximum Likelihood, i.e. maximize 
 
 $$
-\ln(p(\bm{X|\pi, \mu, \Sigma}))
-= \ln p(x^1, x^2, ..., x^N | \pi_1, ... , \pi_K, \mu_1, ...)
+\ln(p(X|\pi, \mu, \Sigma))
+= \ln p(x^1, x^2, ..., x^N | \pi_1, ... , \pi_K, \mu_1, ..., \mu_k, \Sigma_1, ... , \Sigma_K)
 $$
 
 This algorithm is called **Expectation Maximization (EM)**.

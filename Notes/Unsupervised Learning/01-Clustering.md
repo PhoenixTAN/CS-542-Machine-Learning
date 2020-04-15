@@ -4,6 +4,8 @@
 ###### Date: Feb 23, 2020
 --- 
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 ## Definition
 **Cluster analysis or clustering** is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense) to each other than to those in other groups (clusters).
 
@@ -30,7 +32,7 @@ For example, updating cluster 3's centroid with the average of all the points in
 }
 
 ### How to choose K?
-![alt text](./Clustering-Images/elbow.png)
+![alt text](./Clustering-Images/Elbow.png)
 ![alt text](./Clustering-Images/k-for-purpose.png)
 
 ## Application of Clustering
