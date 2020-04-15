@@ -1,5 +1,7 @@
 # Conditional Probability and Bayes' Theorem
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 ## Reference
 https://en.wikipedia.org/wiki/Joint_probability_distribution  
 https://www.mathsisfun.com/data/probability-events-conditional.html

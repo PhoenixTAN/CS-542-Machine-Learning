@@ -1,5 +1,7 @@
 # Bayesian Method
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 先看贝叶斯公式和条件概率的相关知识。
 
 ## Frequentist vs. Bayesian 
