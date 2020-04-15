@@ -92,6 +92,7 @@ $$
 X = (x_1, x_2, ... , x_N)^T
 $$
 Then, we will have the covariance matrix:
+
 $$
 \Sigma_{i,j} = cov(x_i, x_j) = E[(x_i-E[x_i])(x_j-E[x_j])]
 = E[x_ix_j] - E[x_i][x_j]
@@ -100,7 +101,6 @@ $$
 Correlation coefficient:
 $$
 \rho_{x_i, x_j} = \frac{cov(x_i, x_j)}{\sigma_{x_i}\sigma_{x_j}}
-
 $$
 
 #### Two Dimension
