@@ -181,7 +181,7 @@ maximize probability of data given model.
 
 该方法的核心是条件概率，条件概率是给定参数$\theta$时，最大化已知观测结果的概率，在这个例子里面，$X$就是五次观察结果(Observations)，$\theta$是抛出硬币正面朝上的概率，我们在条件概率里面，认为这个参数是给定的，我们如何对这个参数取值，才能使得这个条件概率最大化。
 
-![alt text](./Linear-Regression-Images/maximumLikelihood03.png)
+![alt text](./Linear-Regression-Images/MaximumLikelihood03.png)
 
 Calculation:
 $$ 
