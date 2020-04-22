@@ -1,0 +1,406 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.5.3)  22 APR 2020 18:02
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**d:/CS-542-Machine-Learning/Problem-Sets/class-challenge-COVID-19/Report/ziqi_tan_report.tex
+(d:/CS-542-Machine-Learning/Problem-Sets/class-challenge-COVID-19/Report/ziqi_tan_report.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count88
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen105
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count90
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2018/04/06 v1.3b Input encoding file
+)) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/diagbox/diagbox.sty
+Package: diagbox 2016/12/28 v2.2 Making table heads with diagonal lines
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2016/02/05 v0.3b Improved picture commands (HjG,RN,JT)
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks19
+\@arclen=\dimen106
+\@arcrad=\dimen107
+\@tempdimd=\dimen108
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+ `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count91
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count92
+\FP@xia=\count93
+\FP@xib=\count94
+\FP@xfa=\count95
+\FP@xfb=\count96
+\FP@rega=\count97
+\FP@regb=\count98
+\FP@regs=\count99
+\FP@times=\count100
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count101
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+)) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count102
+\calc@Bcount=\count103
+\calc@Adimen=\dimen109
+\calc@Bdimen=\dimen110
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count104
+\calc@Cskip=\skip45
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
+\col@sep=\dimen111
+\ar@mcellbox=\box28
+\extrarowheight=\dimen112
+\NC@list=\toks20
+\extratabsurround=\skip46
+\backup@length=\skip47
+\ar@cellbox=\box29
+)
+\diagbox@boxa=\box30
+\diagbox@boxb=\box31
+\diagbox@boxm=\box32
+\diagbox@wd=\dimen113
+\diagbox@ht=\dimen114
+\diagbox@insepl=\dimen115
+\diagbox@insepr=\dimen116
+\diagbox@outsepl=\dimen117
+\diagbox@outsepr=\dimen118
+) (d:\CS-542-Machine-Learning\Problem-Sets\class-challenge-COVID-19\Report/ziqi_tan_report.aux
+
+LaTeX Warning: Label `task2-loss' multiply defined.
+
+
+LaTeX Warning: Label `task2-loss' multiply defined.
+
+
+LaTeX Warning: Label `task2-tsen' multiply defined.
+
+)
+\openout1 = `ziqi_tan_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count105
+\scratchdimen=\dimen119
+\scratchbox=\box33
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen120
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks22
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+))) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))) (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO)
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 17.
+ (d:\CS-542-Machine-Learning\Problem-Sets\class-challenge-COVID-19\Report/ziqi_tan_report.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+ [1
+
+{d:/LaTex/LaTeXInstallation/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+\tf@toc=\write3
+\openout3 = `ziqi_tan_report.toc'.
+
+ [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
+ (d:/LaTex/LaTeXInstallation/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+
+Overfull \hbox (6.65785pt too wide) in paragraph at lines 72--87
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+<./images/vgg16-architecture.png, id=17, 502.12593pt x 502.12593pt>
+File: ./images/vgg16-architecture.png Graphic file (type png)
+<use ./images/vgg16-architecture.png>
+Package pdftex.def Info: ./images/vgg16-architecture.png  used on input line 99.
+(pdftex.def)             Requested size: 341.43306pt x 341.44878pt.
+[4] [5 <./images/vgg16-architecture.png>]
+<./images/task1-accuracy.png, id=26, 387.4475pt x 279.0425pt>
+File: ./images/task1-accuracy.png Graphic file (type png)
+<use ./images/task1-accuracy.png>
+Package pdftex.def Info: ./images/task1-accuracy.png  used on input line 124.
+(pdftex.def)             Requested size: 284.52756pt x 204.92133pt.
+<./images/task1-loss.png, id=27, 393.47pt x 279.0425pt>
+File: ./images/task1-loss.png Graphic file (type png)
+<use ./images/task1-loss.png>
+Package pdftex.def Info: ./images/task1-loss.png  used on input line 136.
+(pdftex.def)             Requested size: 284.52756pt x 201.77904pt.
+ [6 <./images/task1-accuracy.png>]
+<./images/task1-tsen.png, id=32, 378.41376pt x 264.99pt>
+File: ./images/task1-tsen.png Graphic file (type png)
+<use ./images/task1-tsen.png>
+Package pdftex.def Info: ./images/task1-tsen.png  used on input line 152.
+(pdftex.def)             Requested size: 284.52756pt x 199.24744pt.
+ [7 <./images/task1-loss.png>]
+Overfull \hbox (83.35545pt too wide) in paragraph at lines 174--182
+[] 
+ []
+
+
+Overfull \hbox (83.35545pt too wide) in paragraph at lines 183--192
+[] 
+ []
+
+[8 <./images/task1-tsen.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+
+Overfull \hbox (6.65785pt too wide) in paragraph at lines 201--219
+[][] 
+ []
+
+<./images/task2-accuracy.png, id=42, 383.4325pt x 258.9675pt>
+File: ./images/task2-accuracy.png Graphic file (type png)
+<use ./images/task2-accuracy.png>
+Package pdftex.def Info: ./images/task2-accuracy.png  used on input line 234.
+(pdftex.def)             Requested size: 284.52756pt x 192.17824pt.
+[9]
+<./images/task2-loss.png, id=46, 390.45876pt x 258.9675pt>
+File: ./images/task2-loss.png Graphic file (type png)
+<use ./images/task2-loss.png>
+Package pdftex.def Info: ./images/task2-loss.png  used on input line 243.
+(pdftex.def)             Requested size: 284.52756pt x 188.7167pt.
+<./images/task2-tsen.png, id=47, 378.41376pt x 264.99pt>
+File: ./images/task2-tsen.png Graphic file (type png)
+<use ./images/task2-tsen.png>
+Package pdftex.def Info: ./images/task2-tsen.png  used on input line 253.
+(pdftex.def)             Requested size: 284.52756pt x 199.24744pt.
+ [10 <./images/task2-accuracy.png> <./images/task2-loss.png>]
+<./images/ResNet50V2-accuracy.png, id=53, 387.4475pt x 279.0425pt>
+File: ./images/ResNet50V2-accuracy.png Graphic file (type png)
+<use ./images/ResNet50V2-accuracy.png>
+Package pdftex.def Info: ./images/ResNet50V2-accuracy.png  used on input line 266.
+(pdftex.def)             Requested size: 284.52756pt x 204.92133pt.
+ [11 <./images/task2-tsen.png>]
+<./images/ResNet50V2-loss.png, id=58, 387.4475pt x 279.0425pt>
+File: ./images/ResNet50V2-loss.png Graphic file (type png)
+<use ./images/ResNet50V2-loss.png>
+Package pdftex.def Info: ./images/ResNet50V2-loss.png  used on input line 273.
+(pdftex.def)             Requested size: 284.52756pt x 204.92133pt.
+<./images/ResNet50V2-tsen.png, id=59, 378.41376pt x 264.99pt>
+File: ./images/ResNet50V2-tsen.png Graphic file (type png)
+<use ./images/ResNet50V2-tsen.png>
+Package pdftex.def Info: ./images/ResNet50V2-tsen.png  used on input line 281.
+(pdftex.def)             Requested size: 284.52756pt x 199.24744pt.
+ [12 <./images/ResNet50V2-accuracy.png> <./images/ResNet50V2-loss.png>]
+<./images/CPU-lib.png, id=65, 342.5297pt x 194.97844pt>
+File: ./images/CPU-lib.png Graphic file (type png)
+<use ./images/CPU-lib.png>
+Package pdftex.def Info: ./images/CPU-lib.png  used on input line 297.
+(pdftex.def)             Requested size: 312.9803pt x 178.17145pt.
+ [13 <./images/ResNet50V2-tsen.png>]
+<./images/CPU-Training-time.png, id=71, 877.02657pt x 317.68687pt>
+File: ./images/CPU-Training-time.png Graphic file (type png)
+<use ./images/CPU-Training-time.png>
+Package pdftex.def Info: ./images/CPU-Training-time.png  used on input line 306.
+(pdftex.def)             Requested size: 426.79134pt x 154.60147pt.
+
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 306--308
+ [][] 
+ []
+
+[14 <./images/CPU-lib.png>]
+<./images/GPU-lib.png, id=76, 895.09406pt x 642.90187pt>
+File: ./images/GPU-lib.png Graphic file (type png)
+<use ./images/GPU-lib.png>
+Package pdftex.def Info: ./images/GPU-lib.png  used on input line 318.
+(pdftex.def)             Requested size: 398.33858pt x 286.11496pt.
+
+Overfull \hbox (8.33858pt too wide) in paragraph at lines 318--320
+ [][] 
+ []
+
+<./images/GPU-Training-time.png, id=77, 906.38625pt x 246.1697pt>
+File: ./images/GPU-Training-time.png Graphic file (type png)
+<use ./images/GPU-Training-time.png>
+Package pdftex.def Info: ./images/GPU-Training-time.png  used on input line 326.
+(pdftex.def)             Requested size: 426.79134pt x 115.91386pt.
+
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 326--328
+ [][] 
+ []
+
+[15 <./images/CPU-Training-time.png> <./images/GPU-lib.png>] [16 <./images/GPU-Training-time.png>] (d:\CS-542-Machine-Learning\Problem-Sets\class-challenge-COVID-19\Report/ziqi_tan_report.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3155 strings out of 492649
+ 45051 string characters out of 6128182
+ 133595 words of memory out of 5000000
+ 6941 multiletter control sequences out of 15000+600000
+ 8808 words of font info for 31 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,8n,25p,572b,224s stack positions out of 5000i,500n,10000p,200000b,80000s
+<d:/LaTex/LaTeXInstallation/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/LaTex/LaTeXInstallation/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/LaTex/LaTeXInstallation/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/LaTex/LaTeXInstallation/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/LaTex/LaTeXInstallation/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on d:\CS-542-Machine-Learning\Problem-Sets\class-challenge-COVID-19\Report/ziqi_tan_report.pdf (16 pages, 419164 bytes).
+PDF statistics:
+ 105 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+

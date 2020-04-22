@@ -1,0 +1,21 @@
+#!/bin/bash -l
+
+# Specify a project
+#$ -P cs542sb
+
+# Give job a name
+#$ -N task1_CPU
+
+# Join error and output streams
+#$ -j y
+
+# Specify time limit
+#$ -l h_rt=4:00:00
+
+# Send email when the job is done
+#$ -m e
+
+module load python3/3.6.9
+module load tensorflow/2.1.0
+
+python task1_CPU.py
