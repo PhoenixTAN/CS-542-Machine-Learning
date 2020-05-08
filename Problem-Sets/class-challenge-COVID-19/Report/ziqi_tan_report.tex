@@ -1,16 +1,18 @@
 %
 % Ziqi Tan CS 542 Class Challenge Report
 %
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,10pt]{article}
+\usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage{diagbox}
 
+\geometry{a4paper,left=3cm,right=3cm,top=2cm,bottom=2cm}
 \begin{document}
    \title{CS 542 Class Challenge Report \\ Image Classification of COVID-19 X-rays}
-   \author{Ziqi Tan \\ E-mail: ziqi1756@bu.edu}
+   \author{Ziqi Tan \\ U 88387934 \\ E-mail: ziqi1756@bu.edu}
           
    \date{April, 18, 2020}
 
@@ -39,7 +41,7 @@ In task 1, a pre-train VGG16 performs well in a binary classification problem
 and it achieves a high accuracy of 95\%, but a random guess test accuracy.
 Task 2 is a classification task with 4 classes. VGG16 as a good starter still achieves a high accuracy of 75\%. 
 Then, ResNet50V2 architecture is taken as a competing model, which can only achieves 45\% validation accuracy 
-and it gets a high test accuracy of 61.11\%.
+and it gets a high test accuracy of 61.11\%. Section 5 would be the deployment of the task runing on the GPU of the SCC cluster.
 
 
 \section{Data Preprocessing and Data Augmentation}
@@ -85,7 +87,12 @@ A pre-trained model VGG16 [1] has been employed in this architecture. \\
   \hline
 \end{tabular}
 
-\hfill \break
+\begin{itemize}
+  \item Total parameters: 21,137,729
+  \item Trainable parameters: 6,423,041
+  \item Non-trainable parameters: 14,714,688
+\end{itemize}
+
 
 VGG16 achieves a high accuracy on image classifcation. 
 The 3 fully-connected layers at the top of the VGG16 network are re-defined 
@@ -121,7 +128,7 @@ secondly, the test data may have high bias.
 \subsubsection{Accuracy and Loss}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{./images/task1-accuracy.png}
+  \includegraphics[width=8cm]{./images/task1-accuracy.png}
      \caption{Accuracy on training set and validation set over 40 epochs}
         \label{task1-accuracy}
 \end{figure}
@@ -133,7 +140,7 @@ meaning that the model is not overfitting.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{./images/task1-loss.png}
+  \includegraphics[width=8cm]{./images/task1-loss.png}
      \caption{Loss on trainning set and validation set over 40 epochs}
         \label{task1-loss}
 \end{figure}
@@ -149,7 +156,7 @@ the high-dimension features. T-SEN is used to reduce 256 dimension features to 2
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{./images/task1-tsen.png}
+  \includegraphics[width=8cm]{./images/task1-tsen.png}
      \caption{Two dimensional features on class COVID and Normal}
         \label{task1-tsen}
 \end{figure}
@@ -208,93 +215,233 @@ A pre-trained model VGG16 [1] has been employed in this architecture. \\
   Input              & (None, 224, 224, 3)& 0 \\
   VGG16 (Model)      & (None, 7, 7, 512)  & 14714688 \\
   Flatten            & (None, 25088)      & 0   \\
-  Fully connected    & (None, 256)        & 6422784 \\
-  ReLu               & (None, 256)        & 0 \\
-  Fully connected    & (None, 256)        & 6422784 \\
-  ReLu               & (None, 256)        & 0 \\
-  Fully connected    & (None, 1)          & 257\\
+  Dropout1            & (None, 25088)      & 0   \\
+  Fully connected    & (None, 2048)       & 51382272 \\
+  ReLu               & (None, 2048)       & 0 \\
+  Dropout2            & (None, 2048)       & 0 \\
+  Fully connected    & (None, 256)        & 524544 \\
+  Fully connected    & (None, 4)          & 1028\\
   Softmax            & (None, 4)          & 0 \\
   \hline
 \end{tabular}
+
+\begin{itemize}
+  \item Total parameters: 66,622,532 
+  \item Trainable parameters: 51,907,844 
+  \item Non-trainable parameters: 14,714,688 
+\end{itemize}
 
 \subsection{Training}
 \begin{itemize}
   \item Optimizer: Adam.
   \item Loss function: tf.keras.losses.CategoricalCrossentropy.
   \item Epochs: 100.
-  \item Regularization: dropout layers.
-  \item Batch size: 10.
+  \item Regularization: Dropout is a regularization technique 
+  for reducing overfitting in neural networks.
+  According to [1], dropout ratio is set to be 0.5 for each fully connected layer. 
+  In this case, we set 0.4 for dropout1 layer and 0.3 for dropout2.
+  \item Batch size: 10. 
 \end{itemize}
+
+\subsubsection{Parameters tuning}
+
+\begin{tabular}{|c|c|}
+  
+  \hline
+  \multicolumn{2}{|c|}{Change batch size} \\
+  \hline
+  Batch size      & Test accuracy \\
+  \hline
+  5     & 61\%  \\
+  6     & 69\%  \\
+  7     & 55\%  \\
+  8     & 47\%  \\
+  9     & 50\%  \\
+  10    & 75\%  \\
+  11    & 64\%  \\
+  12    & 77\%  \\
+  13    & 61\%  \\
+  14    & 61\%  \\
+  15    & 69\%  \\
+  \hline
+\end{tabular}
+
+
 
 \subsection{Testing}
 Test accuracy is 75\% and test loss is 0.7699.
 \subsubsection{Accuracy and Loss}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{./images/task2-accuracy.png}
+  \includegraphics[width=8cm]{./images/task2-accuracy.png}
      \caption{Accuracy on training set and validation set over 100 epochs}
         \label{task2-accuracy}
 \end{figure}
 
-Train accuracy 
+Both train accuracy and validation accuracy converge after 50 epochs. 
+They fluctuate around 68\%. 
+Validation accuracy is slightly lower than train accuracy after 50 epochs, 
+which means the model is not overfitting.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{./images/task2-loss.png}
+  \includegraphics[width=8cm]{./images/task2-loss.png}
      \caption{Loss on trainning set and validation set over 100 epochs}
         \label{task2-loss}
 \end{figure}
 
-
+Both train loss and validation loss converge after 50 epochs.
 
 \subsubsection{t-SNE visualizations}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{./images/task2-tsen.png}
+  \includegraphics[width=8cm]{./images/task2-tsen.png}
      \caption{Two dimensional features on class COVID, Normal, Pneumonia\_bacterial and Pneumonia\_Viral}
         \label{task2-tsen}
 \end{figure}
 
+The four classes are clearly clustered in 3 groups. 
+COVID-19 is the blue cluster and Normal is the yellow.
+Both Pneumonia\_bacterial and Pneumonia\_viral are in the red and green cluster, 
+which means they have similiar features.
+
 \subsection{ResNet50V2 Architecture for task 2}
 
+\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|}
+  
+  \hline
+  \multicolumn{3}{|c|}{Architecture} \\
+  \hline
+  Layer (type) & Output shape & Number of parameters \\
+  \hline
+  Input              & (None, 224, 224, 3)& 0 \\
+  ResNet50V2 (Model) & (None, 7, 7, 2048)  & 14714688 \\
+  Average\_pooling2d  & (None, 1, 1, 2048)  & 0 \\ 
+  Flatten            & (None, 2048)      & 0   \\
+  Dropout1            & (None, 2048)      & 0   \\
+  Fully connected    & (None, 256)        & 524544 \\
+  Dropout2           & (None, 256)        & 0 \\
+  Softmax            & (None, 4)          & 1028 \\
+  \hline
+\end{tabular}
+
+\begin{itemize}
+  \item Total parameters: 24,090,372
+  \item Trainable parameters: 525,572
+  \item Non-trainable parameters: 23,564,800
+\end{itemize}
+
 \subsection{Training}
+
+\begin{itemize}
+  \item Optimizer: Adam with learning rate scheduler.
+  \item Loss function: tf.keras.losses.CategoricalCrossentropy.
+  \item Epochs: 100.
+  \item Regularization: set 0.3 for dropout1 layer and 0.2 for dropout2.
+  \item Batch size: 10. 
+\end{itemize}
+
+\begin{tabular}{|c|c|}
+  
+  \hline
+  \multicolumn{2}{|c|}{Learning rate scheduler} \\
+  \hline
+  Epochs              & Learning rate  \\
+  \hline
+  (0,80)    & 1e-3  \\
+  (80,120)  & 1e-1   \\ 
+  (120,160) & 1e-2    \\
+  (160,180) & 1e-3     \\
+  Others    & 0.5e-3    \\
+  \hline
+\end{tabular}
+
 \subsection{Testing}
+
+The test accuracy: 61.11\%.
 
 \subsubsection{Accuraccy and Loss}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{./images/ResNet50V2-accuracy.png}
+  \includegraphics[width=8cm]{./images/ResNet50V2-accuracy.png}
      \caption{Accuracy on training set and validation set over 100 epochs}
         \label{task2-loss}
 \end{figure}
 
+The train accuracy converges after 80 epochs on 78\%, 
+while the validation accuracy converges after 60 epochs on 40\%.
+The train accuracy is about 35\% higher than validation accuracy, 
+indicating that an overfitting occurs, 
+even though dropout regularization has been adapted. 
+The reason may be that pre-trained model itself becomes overfitting.
+
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{./images/ResNet50V2-loss.png}
+  \includegraphics[width=8cm]{./images/ResNet50V2-loss.png}
      \caption{Loss on trainning set and validation set over 100 epochs}
         \label{task2-loss}
 \end{figure}
 
+The vallidation loss is fairly higher than the train loss.
+
 \subsubsection{t-SNE visualization}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{./images/ResNet50V2-tsen.png}
+  \includegraphics[width=8cm]{./images/ResNet50V2-tsen.png}
      \caption{Two dimensional features on class COVID, Normal, Pneumonia\_bacterial and Pneumonia\_Viral}
         \label{task2-tsen}
 \end{figure}
 
+The four classes are clearly clustered in 3 groups. 
+COVID-19 is the blue cluster and Normal is the yellow.
+Both Pneumonia\_bacterial and Pneumonia\_viral are in the red and green cluster, 
+which means they have similiar features.
+
 \subsection{Comparasion between VGG16 and ResNet50V2}
-\subsubsection{Accuraccy}
-\subsubsection{Layers}
-\subsubsection{Parameters}
-\subsubsection{Model Complexity}
+
+\paragraph{Accuracy}
+
+VGG16 outperforms ResNet50V2 mainly in two aspects: accuracy and model complexity. 
+VGG16 achieve 75\% test accuracy, while ResNet50V2 has only 61.11\%. 
+
+\paragraph{Model complexity}
+ResNet50V2 is more complex than VGG16.
+
+\hfill \break
+
+\begin{tabular}{|p{4cm}|p{3cm}|p{3cm}|}
+  
+  \hline
+  \multicolumn{3}{|c|}{Model Complexity} \\
+  \hline
+  Number of parameters & VGG16 &ResNet50V2\\
+  \hline
+  Trainable       & 51,907,844  & 525,572   \\
+  Non-Trainable   & 14,714,688  & 23,564,800 \\
+  Total           & 66,622,532  & 24,090,372  \\
+  \hline
+\end{tabular}
+
+\begin{itemize}
+  \item The number of non-trainable parameters of ResNet50V2 is about 1.5 times of that of VGG 16.
+  \item A more complex model may be more likely to overfit the training data.
+  The result shows that ResNet50V2 becomes overfitting while VGG16 does not, which may be caused by 
+  the over-complexity.
+\end{itemize}
+
+\paragraph{Training} 
+It is required to schedule the learning rate in ResNet50V2 to achieve higher accuracy.
+VGG16 only needs to use default Adam optimizer.
+
+\paragraph{T-SEN} VGG16 have a wider boundary between different clusters.
+
 
 \section{Deploy Tasks on SCC Cluster [Bonus: 10 points]}
 
 \subsection{Training time on CPU}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=11cm]{./images/CPU-lib.png}
+  \includegraphics[width=8cm]{./images/CPU-lib.png}
      \caption{The CPU library on SCC}
         \label{CPU-lib}
 \end{figure}
@@ -329,6 +476,9 @@ Training on CPU takes 2786 seconds as the Fig.\ref{CPU-Training-time} shows.
         \label{GPU-Training-time}
 \end{figure}
 
+Training on GPU only takes 483 seconds.
+
+\newpage
 \begin{thebibliography}{}
 
   \bibitem{VGG16} Karen Simonyan and Andrew Zisserman,

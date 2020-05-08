@@ -1,30 +1,31 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {1}Introduction}{3}
-\contentsline {section}{\numberline {2}Data Preprocessing and Data Augmentation}{3}
-\contentsline {section}{\numberline {3}Task 1 [30 points]}{4}
-\contentsline {subsection}{\numberline {3.1}Dataset}{4}
-\contentsline {subsection}{\numberline {3.2}VGG16 Architecture for task 1}{4}
-\contentsline {subsection}{\numberline {3.3}Training}{5}
-\contentsline {subsection}{\numberline {3.4}Testing}{5}
-\contentsline {subsubsection}{\numberline {3.4.1}Accuracy and Loss}{6}
-\contentsline {subsubsection}{\numberline {3.4.2}t-SNE visualizations}{7}
-\contentsline {section}{\numberline {4}Task 2 [30 points]}{8}
-\contentsline {subsection}{\numberline {4.1}Dataset}{8}
-\contentsline {subsection}{\numberline {4.2}VGG16 Architecture for task 2}{9}
-\contentsline {subsection}{\numberline {4.3}Training}{9}
-\contentsline {subsection}{\numberline {4.4}Testing}{9}
-\contentsline {subsubsection}{\numberline {4.4.1}Accuracy and Loss}{10}
-\contentsline {subsubsection}{\numberline {4.4.2}t-SNE visualizations}{11}
-\contentsline {subsection}{\numberline {4.5}ResNet50V2 Architecture for task 2}{12}
-\contentsline {subsection}{\numberline {4.6}Training}{12}
-\contentsline {subsection}{\numberline {4.7}Testing}{12}
-\contentsline {subsubsection}{\numberline {4.7.1}Accuraccy and Loss}{12}
-\contentsline {subsubsection}{\numberline {4.7.2}t-SNE visualization}{13}
-\contentsline {subsection}{\numberline {4.8}Comparasion between VGG16 and ResNet50V2}{14}
-\contentsline {subsubsection}{\numberline {4.8.1}Accuraccy}{14}
-\contentsline {subsubsection}{\numberline {4.8.2}Layers}{14}
-\contentsline {subsubsection}{\numberline {4.8.3}Parameters}{14}
-\contentsline {subsubsection}{\numberline {4.8.4}Model Complexity}{14}
-\contentsline {section}{\numberline {5}Deploy Tasks on SCC Cluster [Bonus: 10 points]}{14}
-\contentsline {subsection}{\numberline {5.1}Training time on CPU}{14}
-\contentsline {subsection}{\numberline {5.2}Training time on GPU}{15}
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Data Preprocessing and Data Augmentation}{2}
+\contentsline {section}{\numberline {3}Task 1 [30 points]}{2}
+\contentsline {subsection}{\numberline {3.1}Dataset}{2}
+\contentsline {subsection}{\numberline {3.2}VGG16 Architecture for task 1}{2}
+\contentsline {subsection}{\numberline {3.3}Training}{3}
+\contentsline {subsection}{\numberline {3.4}Testing}{3}
+\contentsline {subsubsection}{\numberline {3.4.1}Accuracy and Loss}{4}
+\contentsline {subsubsection}{\numberline {3.4.2}t-SNE visualizations}{4}
+\contentsline {section}{\numberline {4}Task 2 [30 points]}{5}
+\contentsline {subsection}{\numberline {4.1}Dataset}{5}
+\contentsline {subsection}{\numberline {4.2}VGG16 Architecture for task 2}{5}
+\contentsline {subsection}{\numberline {4.3}Training}{6}
+\contentsline {subsubsection}{\numberline {4.3.1}Parameters tuning}{6}
+\contentsline {subsection}{\numberline {4.4}Testing}{6}
+\contentsline {subsubsection}{\numberline {4.4.1}Accuracy and Loss}{6}
+\contentsline {subsubsection}{\numberline {4.4.2}t-SNE visualizations}{7}
+\contentsline {subsection}{\numberline {4.5}ResNet50V2 Architecture for task 2}{7}
+\contentsline {subsection}{\numberline {4.6}Training}{8}
+\contentsline {subsection}{\numberline {4.7}Testing}{8}
+\contentsline {subsubsection}{\numberline {4.7.1}Accuraccy and Loss}{8}
+\contentsline {subsubsection}{\numberline {4.7.2}t-SNE visualization}{9}
+\contentsline {subsection}{\numberline {4.8}Comparasion between VGG16 and ResNet50V2}{9}
+\contentsline {paragraph}{Accuracy}{9}
+\contentsline {paragraph}{Model complexity}{9}
+\contentsline {paragraph}{Training}{9}
+\contentsline {paragraph}{T-SEN}{9}
+\contentsline {section}{\numberline {5}Deploy Tasks on SCC Cluster [Bonus: 10 points]}{10}
+\contentsline {subsection}{\numberline {5.1}Training time on CPU}{10}
+\contentsline {subsection}{\numberline {5.2}Training time on GPU}{11}
